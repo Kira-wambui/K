@@ -1,0 +1,123 @@
+<!-- questionnaire.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> <!-- Link to your stylesheet -->
+    <link href="https://fonts.googleapis.com/css2?family=Autumn+in+November&display=swap" rel="stylesheet">
+    <style>
+        /* Customize the CSS styles here */
+        body {
+            font-family: 'Autumn in November', cursive;
+            background-color: teal; /* Custom background color */
+            margin: 0;
+            padding: 0;
+            color: white; /* Text color */
+            text-align: center;
+        }
+
+        /* Add styles for the questionnaire container */
+        .questionnaire-container {
+            background-color: black; /* Black background color */
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Add styles for the questionnaire buttons */
+        .questionnaire-button {
+            background-color: magenta; /* Magenta button background color */
+            color: teal; /* Teal button text color */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.5rem; /* Adjust font size */
+            margin: 10px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Add hover effect for the questionnaire buttons */
+        .questionnaire-button:hover {
+            background-color: teal; /* Hover background color */
+            color: magenta; /* Hover text color */
+        }
+    </style>
+    <title>Animal Compatibility Questionnaire</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Animal Compatibility Questionnaire</h1>
+    </header>
+
+    <main>
+        <div class="questionnaire-container">
+            <!-- Question 1 -->
+            <button class="questionnaire-button">Do you prefer an active or calm lifestyle?</button>
+
+            <!-- Question 2 -->
+            <button class="questionnaire-button">Are you more introverted or extroverted?</button>
+
+            <!-- Question 3 -->
+            <button class="questionnaire-button">Do you enjoying spending time outdoors or indoors?</button>
+
+            <!-- Question 4 -->
+            <button class="questionnaire-button">How do you feel about social interactions?</button>
+
+            <!-- Question 5 -->
+            <button class="questionnaire-button">Are you more spontaneous or prefer planned activities?</button>
+
+            <!-- Question 6 -->
+            <button class="questionnaire-button">How do you handle challenges or obstacles?</button>
+
+            <!-- Question 7 -->
+            <button class="questionnaire-button">Which environment do you prefer?</button>
+
+            <!-- Question 8 -->
+            <button class="questionnaire-button">How do you make decisions?</button>
+
+            <!-- Question 9 -->
+            <button class="questionnaire-button">How important is routine in your life?</button>
+
+            <!-- Question 10 -->
+            <button class="questionnaire-button">Which activity appeals to you most?</button>
+
+            <!-- Advanced Factors -->
+            <h2>Advanced Factors</h2>
+
+            <!-- Question 11 -->
+            <button class="questionnaire-button">Are you allergic to any animals?</button>
+
+            <!-- Question 12 -->
+            <button class="questionnaire-button">How do you feel about exotic pets?</button>
+
+            <!-- Question 13 -->
+            <button class="questionnaire-button">Are you open to owning large animals?</button>
+
+            <!-- Question 14 -->
+            <button class="questionnaire-button">How much time can you dedicate to pet care daily?</button>
+
+            <!-- Question 15 -->
+            <button class="questionnaire-button">How do you feel about adopting rescued animals?</button>
+
+            <!-- Link to the results page -->
+            <a href="/results" class="questionnaire-button" id="submit-button">Submit</a>
+        </div>
+    </main>
+
+    <!-- JavaScript code for form submission -->
+    <script>
+        // Function to handle form submission
+        function handleSubmit(event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+            alert('Thank you for submitting the questionnaire!'); // Display an alert message
+            // You can add code here to process the form data or redirect to the results page
+        }
+
+        // Add an event listener to the submit button
+        document.getElementById('submit-button').addEventListener('click', handleSubmit);
+    </script>
+</body>
+</html>
+

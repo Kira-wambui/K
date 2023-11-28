@@ -1,0 +1,157 @@
+def calculate_compatibility(answers):
+    # Define characteristics of animals
+    animal_profiles = [
+        {
+            'name': 'Dog',
+            'active': 5,
+            'introverted': 3,
+            'outdoors': 5,
+            'social': 5,
+            'spontaneous': 4,
+            'persistent': 5,
+            'warm': 5,
+            'logical': 3,
+            'routine': 4,
+            'exploring': 4,
+            'factor1': 4,  # Add advanced factor 1 for Dog
+            'factor2': 3,  # Add advanced factor 2 for Dog
+            'factor3': 5,  # Add advanced factor 3 for Dog
+            'factor4': 2,  # Add advanced factor 4 for Dog
+            'factor5': 4,  # Add advanced factor 5 for Dog
+        },
+        {
+            'name': 'Cat',
+            'active': 2,
+            'introverted': 5,
+            'outdoors': 2,
+            'social': 2,
+            'spontaneous': 3,
+            'persistent': 2,
+            'warm': 2,
+            'logical': 4,
+            'routine': 5,
+            'exploring': 2,
+            'factor1': 2,  # Add advanced factor 1 for Cat
+            'factor2': 4,  # Add advanced factor 2 for Cat
+            'factor3': 3,  # Add advanced factor 3 for Cat
+            'factor4': 5,  # Add advanced factor 4 for Cat
+            'factor5': 1,  # Add advanced factor 5 for Cat
+        },
+        {
+            'name': 'Rabbit',
+            'active': 4,
+            'introverted': 3,
+            'outdoors': 4,
+            'social': 4,
+            'spontaneous': 3,
+            'persistent': 4,
+            'warm': 4,
+            'logical': 3,
+            'routine': 3,
+            'exploring': 3,
+            'factor1': 3,  # Add advanced factor 1 for Rabbit
+            'factor2': 4,  # Add advanced factor 2 for Rabbit
+            'factor3': 3,  # Add advanced factor 3 for Rabbit
+            'factor4': 3,  # Add advanced factor 4 for Rabbit
+            'factor5': 4,  # Add advanced factor 5 for Rabbit
+        },
+        {
+            'name': 'Snake',
+            'active': 3,
+            'introverted': 4,
+            'outdoors': 3,
+            'social': 1,
+            'spontaneous': 5,
+            'persistent': 4,
+            'warm': 1,
+            'logical': 5,
+            'routine': 2,
+            'exploring': 5,
+            'factor1': 5,  # Add advanced factor 1 for Snake
+            'factor2': 1,  # Add advanced factor 2 for Snake
+            'factor3': 4,  # Add advanced factor 3 for Snake
+            'factor4': 2,  # Add advanced factor 4 for Snake
+            'factor5': 3,  # Add advanced factor 5 for Snake
+        },
+        {
+            'name': 'Lizard',
+            'active': 3,
+            'introverted': 3,
+            'outdoors': 4,
+            'social': 2,
+            'spontaneous': 3,
+            'persistent': 4,
+            'warm': 3,
+            'logical': 3,
+            'routine': 4,
+            'exploring': 4,
+            'factor1': 2,  # Add advanced factor 1 for Lizard
+            'factor2': 4,  # Add advanced factor 2 for Lizard
+            'factor3': 4,  # Add advanced factor 3 for Lizard
+            'factor4': 3,  # Add advanced factor 4 for Lizard
+            'factor5': 2,  # Add advanced factor 5 for Lizard
+        },
+        {
+            'name': 'Mouse',
+            'active': 2,
+            'introverted': 4,
+            'outdoors': 1,
+            'social': 2,
+            'spontaneous': 1,
+            'persistent': 3,
+            'warm': 1,
+            'logical': 4,
+            'routine': 5,
+            'exploring': 2,
+            'factor1': 1,  # Add advanced factor 1 for Mouse
+            'factor2': 2,  # Add advanced factor 2 for Mouse
+            'factor3': 1,  # Add advanced factor 3 for Mouse
+            'factor4': 3,  # Add advanced factor 4 for Mouse
+            'factor5': 2,  # Add advanced factor 5 for Mouse
+        },
+        {
+            'name': 'Chicken',
+            'active': 4,
+            'introverted': 3,
+            'outdoors': 4,
+            'social': 3,
+            'spontaneous': 2,
+            'persistent': 4,
+            'warm': 4,
+            'logical': 2,
+            'routine': 4,
+            'exploring': 3,
+            'factor1': 3,  # Add advanced factor 1 for Chicken
+            'factor2': 3,  # Add advanced factor 2 for Chicken
+            'factor3': 4,  # Add advanced factor 3 for Chicken
+            'factor4': 2,  # Add advanced factor 4 for Chicken
+            'factor5': 4,  # Add advanced factor 5 for Chicken
+        },
+        {
+            'name': 'Rat',
+            'active': 2,
+            'introverted': 4,
+            'outdoors': 1,
+            'social': 3,
+            'spontaneous': 3,
+            'persistent': 4,
+            'warm': 1,
+            'logical': 4,
+            'routine': 4,
+            'exploring': 2,
+            'factor1': 1,  # Add advanced factor 1 for Rat
+            'factor2': 2,  # Add advanced factor 2 for Rat
+            'factor3': 1,  # Add advanced factor 3 for Rat
+            'factor4': 3,  # Add advanced factor 4 for Rat
+            'factor5': 3,  # Add advanced factor 5 for Rat
+        },
+        {
+            'name': 'Bird',
+            'active': 3,
+            'introverted': 3,
+            'outdoors': 5,
+            'social': 4,
+            'spontaneous': 4,
+            'persistent': 3,
+            'warm': 4,
+            'logical': 3,
