@@ -1,11 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900");
 @import url("fontawesome-all.min.css");
 
-/*
-	Aerial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -99,7 +94,7 @@ input, select, textarea {
 		}
 
 	body, input, select, textarea {
-		color: #020202;
+		color: #fff;
 		font-family: 'Source Sans Pro', sans-serif;
 		font-size: 15pt;
 		font-weight: 300 !important;
@@ -108,10 +103,10 @@ input, select, textarea {
 	}
 
 	a {
-		-moz-transition: border-color 0.3s ease-in-out;
-		-webkit-transition: border-color 0.3s ease-in-out;
-		-ms-transition: border-color 0.3s ease-in-out;
-		transition: border-color 0.3s ease-in-out;
+		-moz-transition: border-color 0.2s ease-in-out;
+		-webkit-transition: border-color 0.2s ease-in-out;
+		-ms-transition: border-color 0.2s ease-in-out;
+		transition: border-color 0.2s ease-in-out;
 		border-bottom: dotted 1px;
 		color: inherit;
 		outline: 0;
